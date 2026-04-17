@@ -1,0 +1,90 @@
+
+/* Caveat Font */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+/* Colores propios — definidos como propiedades CSS estándar */
+:root {
+  --color-rojo-oxido: rgba(182, 41, 18, 1);
+  --color-amarillo-ocre: rgba(213, 192, 47, 1);
+  --color-azul-petroleo: rgba(48, 71, 100, 1);
+  --color-verde-liquen: rgba(117, 141, 114, 1);
+  --color-verde-oliva: rgba(132, 130, 49, 1);
+  --color-verde-profundo: rgba(50, 65, 40, 1);
+  --color-marron-arcilla: rgba(138, 55, 33, 1);
+  --color-naranja-tierra: rgba(206, 125, 35, 1);
+  --color-verde-palido: rgba(199, 197, 120, 1);
+}
+
+/* Tema personalizado para DaisyUI 5
+ *
+ * Teoría del color aplicada:
+ *   azul-petroleo (220°) ↔ naranja-tierra (35°)  → par complementario  → primary / accent
+ *   verde-oliva                                   → análogo cálido       → secondary
+ *   marron-arcilla                                → tierra oscura cálida → neutral
+ *   rojo-oxido                                    → rojo puro             → error (convención)
+ *   amarillo-ocre                                 → amarillo puro         → warning (convención)
+ *   verde-liquen                                  → verde medio           → success
+ *   verde-palido                                  → tono suave neutro     → info
+ */
+[data-theme="songs"] {
+  /* Bases: pergamino cálido con tinte terroso */
+  --color-base-100: oklch(98% 0.01 90);
+  --color-base-200: oklch(94% 0.01 90);
+  --color-base-300: oklch(88% 0.02 90);
+  --color-base-content: var(--color-verde-profundo); /* L≈27% → alto contraste sobre bases claras */
+
+  /* Primary: único frío de la paleta, ancla visual */
+  --color-primary: var(--color-azul-petroleo);       /* L≈33% oscuro */
+  --color-primary-content: oklch(95% 0.01 240);      /* claro sobre oscuro */
+
+  /* Secondary: análogo cálido-terroso, no tensiona al primary */
+  --color-secondary: var(--color-verde-oliva);       /* L≈54% medio-oscuro */
+  --color-secondary-content: oklch(95% 0.01 116);    /* claro sobre medio-oscuro */
+
+  /* Accent: complementario directo del azul (220° → 35°), máximo contraste */
+  --color-accent: var(--color-naranja-tierra);       /* L≈62% medio-claro */
+  --color-accent-content: oklch(20% 0.03 63);        /* oscuro sobre claro */
+
+  /* Neutral: tierra oscura cálida para superficies neutras (cards, footers) */
+  --color-neutral: var(--color-marron-arcilla);      /* L≈40% oscuro */
+  --color-neutral-content: oklch(95% 0.01 35);       /* claro sobre oscuro */
+
+  /* Info: tono suave neutro, no alarma */
+  --color-info: var(--color-verde-palido);           /* L≈79% muy claro */
+  --color-info-content: oklch(20% 0.03 105);         /* oscuro sobre muy claro */
+
+  /* Success: verde medio, legible como positivo */
+  --color-success: var(--color-verde-liquen);        /* L≈58% medio */
+  --color-success-content: oklch(20% 0.03 143);      /* oscuro sobre medio */
+
+  /* Warning: amarillo = precaución (convención universal) */
+  --color-warning: var(--color-amarillo-ocre);       /* L≈79% muy claro */
+  --color-warning-content: oklch(20% 0.03 91);       /* oscuro sobre muy claro */
+
+  /* Error: rojo = error (convención universal) */
+  --color-error: var(--color-rojo-oxido);            /* L≈45% oscuro */
+  --color-error-content: oklch(95% 0.01 27);         /* claro sobre oscuro */
+}
+
+/* Clases para el efecto de colores en el nombre */
+.titulo p {
+    transition: color 0.3s ease;
+    display: inline-block; /* Para que el hover funcione bien */
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.color-a:hover { color: var(--color-rojo-oxido); }
+.color-b:hover { color: var(--color-amarillo-ocre); }
+.color-c:hover { color: var(--color-azul-petroleo); }
+.color-d:hover { color: var(--color-verde-liquen); }
+.color-e:hover { color: var(--color-verde-oliva); }
+.color-f:hover { color: var(--color-verde-profundo); }
+
+.titulo {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: x-large;
+}
