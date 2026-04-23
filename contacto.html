@@ -42,54 +42,74 @@
         </header>
         
         <main class="bg-hero min-h-screen p-5 relative">
-
             <div class="absolute inset-0 bg-base-100 opacity-20"></div>
 
             <div class="relative z-10">
-                <div class="flex flex-wrap gap-4">
+                <div class="flex flex-wrap gap-8 justify-center p-5">
 
-                    <!-- Card 1 -->
-                    <div class="card lg:card-side bg-base-200 shadow-sm flex-1">
-                        <figure class="p-5">
-                            <img class="w-96 rounded-lg" src="./img/artist.avif" alt="Album"/>
-                        </figure>
-                        <div class="card-body flex-1 items-start">
-                            <section>
-                                <h1 class="card-title">Adrianne Elizabeth Lenker</h1>
-                                <p>
-                                    Nacida el 9 de julio de 1991 en Indianápolis, es una cantautora y guitarrista
-                                    estadounidense, vocalista principal y compositora de la banda de indie folk
-                                    <strong>Big Thief</strong>, además de consolidada artista solista. <br/>
-                                    Creció en Minnesota y comenzó a escribir canciones desde los ocho años; a los 13 ya había
-                                    grabado su primer álbum, impulsada por su padre, músico, quien le enseñó guitarra
-                                    desde pequeña y la llevó a tocar en bares y noches de micrófono abierto. <br/>
-                                    Su discografía solista incluye <strong>Abysskiss</strong> (2018),
-                                    <strong>Songs</strong> (2020) y <strong>Bright Future</strong> (2024), este último
-                                    nominado al Grammy al Mejor Álbum Folk, y su música se caracteriza por una
-                                    sensibilidad cruda, letras íntimas y una profunda conexión con la naturaleza y
-                                    las emociones humanas.
+                    <!-- Formulario -->
+                    <section>
+                        <div class="divider m-0 bg-base-100 p-5 rounded">
+                            <span class="badge">Contáctanos</span>
+                        </div>
+
+                        <fieldset class="fieldset bg-base-200 border-base-300 rounded-box border p-6 w-96 mt-5 shadow">
+                            <label class="label">Nombre</label>
+                            <input type="text" class="input w-full" placeholder="Tu nombre"/>
+
+                            <label class="label">Email</label>
+                            <input type="email" class="input w-full" placeholder="tu@email.com"/>
+
+                            <label class="label">Asunto</label>
+                            <input type="text" class="input w-full" placeholder="Asunto del mensaje"/>
+
+                            <label class="label">Comentarios</label>
+                            <textarea class="textarea w-full h-32" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+                            <button class="btn btn-primary w-full mt-4">Enviar</button>
+                        </fieldset>
+                    </section>
+
+                    <!-- Info de contacto -->
+                    <section class="mt-4">
+                        <div class="divider m-0 bg-base-100 p-5 rounded">
+                            <span class="badge">Información</span>
+                        </div>
+
+                        <div class="card bg-base-200 shadow w-80 mt-4">
+                            <div class="card-body space-y-3">
+                                <h2 class="card-title font-caveat">Adrianne Lenker</h2>
+
+                                <div class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                    <span>Brooklyn, New York</span>
+                                </div>
+
+                                <div class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                    </svg>
+                                    <a href="https://www.adriannelenker.com" target="_blank" class="link">adriannelenker.com</a>
+                                </div>
+
+                                <div class="flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                    <span>booking@adriannelenker.com</span>
+                                </div>
+
+                                <div class="divider my-1"></div>
+
+                                <p class="text-sm opacity-60">
+                                    Para consultas de prensa, booking o colaboraciones, 
+                                    usa el formulario o escríbenos directamente.
                                 </p>
-                            </section>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="card flex-col bg-base-200 w-full lg:w-150 mx-auto lg:mx-0">
-                        <figure class="p-5 pb-0">
-                            <iframe class="w-full aspect-video rounded"
-                                    src="https://www.youtube.com/embed/Bs4MffKz9rk?si=i8TW1gshFqzQ6dtM&controls=0"
-                                    title="YouTube video player"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin"
-                                    allowfullscreen>
-                            </iframe>
-                        </figure>
-                        <div class="card-body">
-                            <h2 class="card-title font-caveat">Anything</h2>
-                            <span>2020 · Songs</span>
-                        </div>
-                    </div>
+                    </section>
 
                 </div>
             </div>
